@@ -23,7 +23,7 @@ public class L2021111204_3_Test {
             Solution3 s3 = new Solution3();
             int[] nums1 = {1,2,3};
             int[] nums2 = {1,2,4,8};
-            List<Integer> ans1 = new ArrayList<>(Arrays.asList(new Integer[]{1,2,3}));
+            List<Integer> ans1 = new ArrayList<>(Arrays.asList(new Integer[]{1,2}));
             List<Integer> ans2 = new ArrayList<>(Arrays.asList(new Integer[]{1,2,4,8}));
             List<Integer> res1 = s3.largestDivisibleSubset(nums1);
             List<Integer> res2 = s3.largestDivisibleSubset(nums2);
