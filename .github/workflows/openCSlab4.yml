@@ -18,3 +18,9 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
+        
+      - name: Merge PR if tests pass
+        if: ${{ github.event_name == 'pull_request' && success() }}
+        uses: repo-owner/auto-merge-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
